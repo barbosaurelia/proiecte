@@ -6,11 +6,11 @@ text_articol = (" „Il Luce” a avut cuvinte de laudă la adresa lui Radu Dră
 
 lungime_sir = len(text_articol)
 
-l_prima_parte = lungime_sir // 2 if lungime_sir % 2 == 0  else lungime_sir // 2 + 1
-l_a_doua_parte = lungime_sir // 2
 
-prima_parte = text_articol[:l_prima_parte]
-a_doua_parte = text_articol[l_a_doua_parte:]
+l_parte = lungime_sir // 2 + lungime_sir % 2
+
+prima_parte = text_articol[:l_parte]
+a_doua_parte = text_articol[l_parte:]
 
 prima_parte = prima_parte.upper()
 
