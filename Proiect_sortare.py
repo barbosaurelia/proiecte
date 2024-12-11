@@ -50,4 +50,21 @@ def bubbleSort():
 B = Button(app, text="Arată vizualizarea Bubble Sort", command=bubbleSort)
 B.place(x=50, y=50)  # Poziționarea butonului în fereastră
 
+def selectionSort():
+    l = rand_list  # Luăm lista aleatorie generată
+    size = len(l)  # Determinăm dimensiunea listei
+    for i in range(size - 1):  # Iterăm prin listă
+        # Presupunem că elementul curent este cel mai mic
+        min_index = i
+        for j in range(i + 1, size):  # Căutăm cel mai mic element din restul listei
+            if l[j] < l[min_index]:
+                min_index = j  # Actualizăm indexul celui mai mic element găsit
+        if min_index != i:  # Dacă am găsit un element mai mic decât cel curent
+            l[i], l[min_index] = l[min_index], l[i]  # Le schimbăm între ele
+            afisare_sortare(l)  # Afișăm lista actualizată
+            time.sleep(0.5)  # Pauză pentru a vizualiza schimbarea
+
+C = Button(app, text="Arată vizualizarea Selection Sort", command=selectionSort)
+C.place(x=100, y=100)  # Poziționarea butonului în fereastră
+
 app.mainloop()
