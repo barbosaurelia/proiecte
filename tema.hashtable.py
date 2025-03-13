@@ -117,7 +117,7 @@ def custom_hash(cnp):
 total_populatie = sum(populatie_judete.values())
 total_cnp = 1_000_000
 
-# Vom păstra o listă cu toate CNP-urile generate pentru a le putea selecta ulterior
+#listă cu toate CNP-urile generate pentru a le putea selecta ulterior
 cnp_list = []
 
 # Salvăm și în fișierul CSV
