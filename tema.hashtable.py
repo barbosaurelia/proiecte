@@ -154,7 +154,6 @@ with open('cnp_nume.csv', mode='w', newline='') as file:
 print(
     "Generarea a fost finalizată. Fișierul 'cnp_nume.csv' a fost creat și toate CNP-urile au fost inserate în hash table.")
 
-# ---------------------------
 # Partea 2: Selecția aleatorie a 1.000 de CNP-uri și căutarea secvențială în hash table
 num_searches = 1000
 selected_cnp = random.sample(cnp_list, num_searches)
