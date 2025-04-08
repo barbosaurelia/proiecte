@@ -9,7 +9,7 @@
   "produse": [
     { "nume": "Lapte", "pret": 7 },
     { "nume": "Paine", "pret": 3 },
-    { "nume": "Ciocolata", "pret": 5 },
+    { "nume": "Ciocolata" , "pret": 5 },
     { "nume": "Apa", "pret": 2 },
     { "nume": "Cafea", "pret": 9 }
   ]

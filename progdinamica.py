@@ -15,8 +15,8 @@ def calculeaza_rest_optim(suma_de_dat, bancnote_disponibile):
     numar_tipuri_bancnote = len(bancnote_disponibile)
 
     # dp[i] = (nr minim de bancnote pentru suma i, lista de cantitati din fiecare bancnota)
-    dp = [(float('inf'), None)] * (max_suma + 1)
-    dp[0] = (0, [0] * numar_tipuri_bancnote)
+    dp= [(float('inf'), None)] * (max_suma + 1)
+    dp[0]= (0, [0] * numar_tipuri_bancnote)
 
     for suma_curenta in range(1, max_suma + 1):
         for index, bancnota in enumerate(bancnote_disponibile):
