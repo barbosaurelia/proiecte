@@ -17,7 +17,7 @@ master.geometry("400x400")
 master.configure(bg="lightpink")
 master.title("Florarie")
 
-# Etichete și campuri de introducere
+# Etichete si campuri de introducere
 Label(master, text='Denumire floare').grid(row=0, column=0, padx=10, pady=5)
 Label(master, text='Stoc').grid(row=1, column=0, padx=10, pady=5)
 e1 = Entry(master)
@@ -25,19 +25,19 @@ e2 = Entry(master)
 e1.grid(row=0, column=1, padx=10)
 e2.grid(row=1, column=1, padx=10)
 
-# Funcție pentru salvare în fișier
+# Functie pentru salvare în fisier
 def salvare_in_fisier():
     with open("inventar.json", "w") as outfille:
         outfille.write(json.dumps(inventar, indent=2))
 
-# Funcție pentru actualizarea întregului tabel
+# Functie pentru actualizarea intregului tabel
 def actualizeaza_tabel():
     for row in tree.get_children():
         tree.delete(row)
     for index, item in enumerate(inventar):
         tree.insert("", END, iid=index, values=(item["denumire"], item["stoc"]))
 
-# Funcție pentru adăugare
+# Functie pentru adaugare
 def adauga():
     nou = {
         "denumire": e1.get().strip(),
@@ -50,7 +50,7 @@ def adauga():
         e1.delete(0, END)
         e2.delete(0, END)
 
-# Funcție pentru ștergerea liniei după index
+# Functie pentru stergerea liniei după index
 def sterge_linie():
     selected = tree.selection()
     if selected:
@@ -59,11 +59,11 @@ def sterge_linie():
         salvare_in_fisier()
         actualizeaza_tabel()
 
-# Buton de adăugare
+# Buton de adaugare
 button = Button(master, text='Adauga', width=15, command=adauga, bg="hotpink")
 button.grid(row=2, column=1, pady=5)
 
-# Buton de ștergere
+# Buton pentru a sterge
 sterge_button = Button(master, text='Sterge linie', width=15, command=sterge_linie, bg="red")
 sterge_button.grid(row=2, column=0, pady=5)
 
@@ -77,10 +77,10 @@ tree.column("stoc", width=100)
 
 tree.grid(row=3, column=0, columnspan=2, padx=10, pady=10, sticky="nsew")
 
-# Inițializează tabelul
+# Inițializare tabel
 actualizeaza_tabel()
 
-# Redimensionare flexibilă
+# Redimensionare flexibila
 master.grid_rowconfigure(3, weight=1)
 master.grid_columnconfigure(1, weight=1)
 
