@@ -1,6 +1,14 @@
 [
   {
-    "denumire": "crin",
+    "denumire": "trandafir",
+    "stoc": "100"
+  },
+  {
+    "denumire": "lalea",
     "stoc": "2"
+  },
+  {
+    "denumire": "crin",
+    "stoc": "6"
   }
 ]
