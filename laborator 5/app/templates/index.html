@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+  <meta charset="UTF-8">
+  <title>Inventar Flori</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f9f0f5;
+      margin: 40px;
+      color: #333;
+    }
+
+    h1 {
+      color: #aa336a;
+      text-align: center;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 20px;
+      background-color: #fff;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+
+    th, td {
+      padding: 12px 15px;
+      border-bottom: 1px solid #ddd;
+      text-align: left;
+    }
+
+    th {
+      background-color: #f0d9e7;
+      color: #5a2c41;
+    }
+
+    input {
+      padding: 10px;
+      margin-right: 10px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+    }
+
+    button {
+      padding: 10px 15px;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    .add-btn {
+      background-color: #8bc34a;
+      color: white;
+    }
+
+    .edit-btn {
+      background-color: #03a9f4;
+      color: white;
+    }
+
+    .delete-btn {
+      background-color: #f44336;
+      color: white;
+    }
+
+    #message {
+      margin-top: 20px;
+      font-weight: bold;
+    }
+
+    .form-container {
+      margin-top: 30px;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Inventar de Flori</h1>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Denumire floare</th>
+        <th>Stoc</th>
+        <th>Acțiuni</th>
+      </tr>
+    </thead>
+    <tbody id="items-table"></tbody>
+  </table>
+
+  <div class="form-container">
+    <h2 id="form-title">Adaugă / Editează floare</h2>
+    <input type="text" id="denumire" placeholder="Ex: trandafir">
+    <input type="number" id="stoc" placeholder="Ex: 10">
+    <button onclick="saveItem()" class="add-btn">Salvează</button>
+    <button onclick="cancelEdit()" id="cancel-btn" style="display: none;">Anulează</button>
+    <p id="message"></p>
+  </div>
+
+  <script src="/static/script.js"></script>
+</body>
+</html>
